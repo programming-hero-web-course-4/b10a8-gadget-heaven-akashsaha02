@@ -1,11 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Layout from './components/Layout/Layout.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './components/Layout/Layout.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import HomePage from './pages/HomePage/HomePage';
-import ProductDetails from './pages/ProductDetails/ProductDetails.jsx'
+import ProductDetails from './pages/ProductDetails/ProductDetails.jsx';
+
+import { ProductProvider } from "./context/ProductContext/ProductContext.jsx";
+import { CartProvider } from './context/CartContext/CartContext.jsx';
+import { WishlistProvider } from './context/WishlistContext/WishlistContext.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,19 +19,24 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <HomePage/>
+        element: <HomePage />
       },
       {
-        path:'/products/:id',
-        element:<ProductDetails/>
+        path: '/product/:id',
+        element: <ProductDetails />
       }
     ]
-
   }
-])
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ProductProvider>
+      <CartProvider>
+        <WishlistProvider>
+          <RouterProvider router={router} />
+        </WishlistProvider>
+      </CartProvider>
+    </ProductProvider>
   </StrictMode>,
-)
+);

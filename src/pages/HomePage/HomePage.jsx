@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Banner from "../../components/Banner/Banner";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const navigate=useNavigate();
 
   useEffect(() => {
     fetch('productsData.json')
@@ -24,6 +26,10 @@ const HomePage = () => {
   // Get unique categories
   const categories = ["All", ...new Set(products.map((item) => item.category))];
 
+  const handleViewDetails=(id)=>{
+    navigate(`/product/${id}`)
+  }
+
   return (
     <div>
       <Banner />
@@ -32,8 +38,8 @@ const HomePage = () => {
         <h2 className="text-3xl text-center font-bold">Explore Cutting-Edge Gadgets</h2>
         <div className="grid grid-cols-12 mt-10 gap-4">
           {/* Categories */}
-          <div className="col-span-3 bg-base-200 p-4">
-            <div className="flex md:flex-col gap-2">
+          <div className="col-span-3">
+            <div className="flex md:flex-col gap-2 bg-base-200 p-4 rounded-xl">
               {categories.map((category, index) => (
                 <p
                   key={index}
@@ -49,18 +55,19 @@ const HomePage = () => {
           </div>
 
           {/* Products */}
-          <div className="col-span-9 grid grid-cols-2 gap-4">
+          <div className="col-span-9 grid grid-cols-2 md:grid-cols-3 gap-4">
             {filteredProducts.map((item, index) => (
               <div key={index} className="p-2 border rounded-lg">
                 <div className="card">
                   <div className="card-body">
                     <img src={item.image} alt={item.title} className="w-full rounded-lg" />
-                    <h2 className="card-title">{item.title}</h2>
+                    <h2 className="text-lg">{item.title}</h2>
                     <p className="text-lg font-bold">${item.price}</p>
-                    <button className="btn btn-sm">View Details</button>
+                    <button onClick={()=>handleViewDetails(item.id)} className="btn btn-sm">View Details</button>
                   </div>
                 </div>
               </div>
+
             ))}
           </div>
         </div>

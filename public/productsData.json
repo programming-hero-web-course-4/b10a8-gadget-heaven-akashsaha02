@@ -2,7 +2,7 @@
   {
     "id": "apple-iphone-15-pro-max",
     "title": "Apple iPhone 15 Pro Max",
-    "image": "https://example.com/iphone15promax.jpg",
+    "image": "https://i.ibb.co/xsHRdvZ/iphone15.webp",
     "category": "Smartphones",
     "price": 1299,
     "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
@@ -19,7 +19,7 @@
   {
     "id": "samsung-galaxy-s23-ultra",
     "title": "Samsung Galaxy S23 Ultra",
-    "image": "https://example.com/galaxys23ultra.jpg",
+    "image": "https://i.ibb.co/16Y40xk/samsungs23.jpg",
     "category": "Smartphones",
     "price": 1199,
     "description": "Redefine photography with the Samsung Galaxy S23 Ultra.",
@@ -36,7 +36,7 @@
   {
     "id": "google-pixel-7-pro",
     "title": "Google Pixel 7 Pro",
-    "image": "https://example.com/pixel7pro.jpg",
+    "image": "https://i.ibb.co/BjkRkdH/Google-Pixel7-Pro-256-GB-12-GB-Snow.webp",
     "category": "Smartphones",
     "price": 899,
     "description": "The smartest phone with Google’s AI-powered features.",
@@ -53,7 +53,7 @@
   {
     "id": "nothing-phone-2",
     "title": "Nothing Phone (2)",
-    "image": "https://example.com/nothingphone2.jpg",
+    "image": "https://i.ibb.co/b5V9x6C/Nothing-Phone-2-White.png",
     "category": "Smartphones",
     "price": 799,
     "description": "Sleek design with a transparent back and smooth performance.",
@@ -68,26 +68,9 @@
     "rating": 4.5
   },
   {
-    "id": "sony-wh-1000xm5",
-    "title": "Sony WH-1000XM5",
-    "image": "https://example.com/wh1000xm5.jpg",
-    "category": "Earbuds",
-    "price": 399,
-    "description": "Industry-leading noise cancellation for an immersive audio experience.",
-    "specification": [
-      "Up to 30 hours battery life",
-      "Quick Attention Mode",
-      "Bluetooth 5.2",
-      "High-Resolution Audio",
-      "Adaptive Sound Control"
-    ],
-    "availability": true,
-    "rating": 4.9
-  },
-  {
     "id": "asus-rog-phone-7",
     "title": "ASUS ROG Phone 7",
-    "image": "https://example.com/rogphone7.jpg",
+    "image": "https://i.ibb.co/6nNBHR6/Asus-Rog-Phone-9-Ultimate-600x600.jpg",
     "category": "Smartphones",
     "price": 999,
     "description": "High-performance gaming smartphone with advanced cooling and stunning graphics.",
@@ -104,7 +87,7 @@
   {
     "id": "nikon-z9",
     "title": "Nikon Z9",
-    "image": "https://example.com/nikonz9.jpg",
+    "image": "https://i.ibb.co/H2ZLvR8/nikon-z9.webp",
     "category": "Cameras",
     "price": 5499,
     "description": "Flagship mirrorless camera with advanced performance for professionals.",
@@ -121,7 +104,7 @@
   {
     "id": "samsung-galaxy-watch-6",
     "title": "Samsung Galaxy Watch 6",
-    "image": "https://example.com/galaxywatch6.jpg",
+    "image": "https://i.ibb.co/XVxKwRr/samsung-watch.jpg",
     "category": "Smartwatches",
     "price": 399,
     "description": "Your health companion that’s always connected.",
@@ -136,26 +119,9 @@
     "rating": 4.8
   },
   {
-    "id": "canon-eos-r5",
-    "title": "Canon EOS R5",
-    "image": "https://example.com/eosr5.jpg",
-    "category": "Cameras",
-    "price": 3899,
-    "description": "A versatile mirrorless camera designed for high-resolution photography and video.",
-    "specification": [
-      "45MP full-frame sensor",
-      "8K video recording",
-      "20fps continuous shooting",
-      "Dual Pixel CMOS AF II",
-      "5-axis in-body stabilization"
-    ],
-    "availability": true,
-    "rating": 4.9
-  },
-  {
     "id": "macbook-pro-16",
     "title": "MacBook Pro 16-inch",
-    "image": "https://example.com/macbookpro16.jpg",
+    "image": "https://i.ibb.co/Df3JXB5/macbook-pro.webp",
     "category": "Laptops",
     "price": 2499,
     "description": "The ultimate laptop for creators and professionals.",
@@ -172,7 +138,7 @@
   {
     "id": "sony-xperia-1-v",
     "title": "Sony Xperia 1 V",
-    "image": "https://example.com/xperia1v.jpg",
+    "image": "https://i.ibb.co/7zfLTZG/sony-xperia-1-iv-5g-smartphone.jpg",
     "category": "Smartphones",
     "price": 999,
     "description": "High-quality imaging and multimedia features for professionals.",
@@ -189,7 +155,7 @@
   {
     "id": "apple-airpods-pro-2",
     "title": "Apple AirPods Pro 2",
-    "image": "https://example.com/airpodspro2.jpg",
+    "image": "https://i.ibb.co/JxcmRM2/airpods-pro.jpg",
     "category": "Earbuds",
     "price": 249,
     "description": "Immersive sound with active noise cancellation.",
@@ -206,7 +172,7 @@
   {
     "id": "asus-rog-zephyrus-g14",
     "title": "ASUS ROG Zephyrus G14",
-    "image": "https://example.com/rogzephyrusg14.jpg",
+    "image": "https://i.ibb.co/9bZzy7f/asus-g14.webp",
     "category": "Laptops",
     "price": 1599,
     "description": "The perfect blend of power and portability for gamers.",
@@ -223,7 +189,7 @@
   {
     "id": "garmin-fenix-7x",
     "title": "Garmin Fenix 7X",
-    "image": "https://example.com/garminfenix7x.jpg",
+    "image": "https://i.ibb.co/30K5ptM/garmin-watch.webp",
     "category": "Smartwatches",
     "price": 999,
     "description": "Built for adventure with solar charging capabilities.",
@@ -240,7 +206,7 @@
   {
     "id": "samsung-galaxy-buds2",
     "title": "Samsung Galaxy Buds2",
-    "image": "https://example.com/galaxybuds2.jpg",
+    "image": "https://i.ibb.co/KmvqQJz/samsung-buds-2.jpg",
     "category": "Earbuds",
     "price": 149,
     "description": "True wireless earbuds with noise cancellation.",
@@ -257,7 +223,7 @@
   {
     "id": "canon-eos-r7",
     "title": "Canon EOS R7",
-    "image": "https://example.com/eosr7.jpg",
+    "image": "https://i.ibb.co/HV2G7SY/canon-r7.jpg",
     "category": "Cameras",
     "price": 1499,
     "description": "Advanced mirrorless camera for enthusiasts.",
@@ -274,7 +240,7 @@
   {
     "id": "oneplus-buds-pro-2",
     "title": "OnePlus Buds Pro 2",
-    "image": "https://example.com/oneplusbudspro2.jpg",
+    "image": "https://i.ibb.co/jJ8nf26/one-plus-buds-2.jpg",
     "category": "Earbuds",
     "price": 129,
     "description": "Noise-canceling earbuds with high-quality audio.",
@@ -291,7 +257,7 @@
   {
     "id": "dell-xps-15",
     "title": "Dell XPS 15",
-    "image": "https://example.com/dellxps15.jpg",
+    "image": "https://i.ibb.co/vZ9vVsc/dell-xps-9520.png",
     "category": "Laptops",
     "price": 1899,
     "description": "A laptop that combines power and sleek design.",
@@ -308,7 +274,7 @@
   {
     "id": "hp-spectre-x360",
     "title": "HP Spectre x360",
-    "image": "https://example.com/hpspectrex360.jpg",
+    "image": "https://i.ibb.co/dDWJdPD/hp-spectre.jpg",
     "category": "Laptops",
     "price": 1399,
     "description": "An elegant, convertible laptop with impressive performance.",
