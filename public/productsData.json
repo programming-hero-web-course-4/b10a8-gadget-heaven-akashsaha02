@@ -1,0 +1,291 @@
+[
+  {
+    "id": "sony-wh-1000xm5",
+    "title": "Sony WH-1000XM5",
+    "image": "https://example.com/wh1000xm5.jpg",
+    "category": "Earbuds",
+    "price": 399,
+    "description": "Industry-leading noise cancellation for an immersive audio experience.",
+    "specification": [
+      "Up to 30 hours battery life",
+      "Quick Attention Mode",
+      "Bluetooth 5.2",
+      "High-Resolution Audio",
+      "Adaptive Sound Control"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "id": "nikon-z9",
+    "title": "Nikon Z9",
+    "image": "https://example.com/nikonz9.jpg",
+    "category": "Cameras",
+    "price": 5499,
+    "description": "Flagship mirrorless camera with advanced performance for professionals.",
+    "specification": [
+      "45.7MP full-frame sensor",
+      "8K video recording",
+      "20fps continuous shooting",
+      "ISO range of 64-25600",
+      "Weather-sealed body"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": "samsung-galaxy-watch-6",
+    "title": "Samsung Galaxy Watch 6",
+    "image": "https://example.com/galaxywatch6.jpg",
+    "category": "Smartwatches",
+    "price": 399,
+    "description": "Your health companion that’s always connected.",
+    "specification": [
+      "1.5-inch Super AMOLED display",
+      "Wear OS by Google",
+      "ECG and BP monitoring",
+      "Up to 40 hours battery life",
+      "Stainless steel frame"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": "canon-eos-r5",
+    "title": "Canon EOS R5",
+    "image": "https://example.com/eosr5.jpg",
+    "category": "Cameras",
+    "price": 3899,
+    "description": "A versatile mirrorless camera designed for high-resolution photography and video.",
+    "specification": [
+      "45MP full-frame sensor",
+      "8K video recording",
+      "20fps continuous shooting",
+      "Dual Pixel CMOS AF II",
+      "5-axis in-body stabilization"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "id": "macbook-pro-16",
+    "title": "MacBook Pro 16-inch",
+    "image": "https://example.com/macbookpro16.jpg",
+    "category": "Laptops",
+    "price": 2499,
+    "description": "The ultimate laptop for creators and professionals.",
+    "specification": [
+      "16-inch Liquid Retina XDR display",
+      "Apple M2 Max chip",
+      "Up to 96GB unified memory",
+      "Up to 8TB storage",
+      "All-day battery life"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "id": "sony-xperia-1-v",
+    "title": "Sony Xperia 1 V",
+    "image": "https://example.com/xperia1v.jpg",
+    "category": "Smartphones",
+    "price": 999,
+    "description": "High-quality imaging and multimedia features for professionals.",
+    "specification": [
+      "6.5-inch 4K HDR OLED display",
+      "Snapdragon 8 Gen 2",
+      "48MP Triple-camera",
+      "5000mAh battery",
+      "256GB storage"
+    ],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "id": "apple-airpods-pro-2",
+    "title": "Apple AirPods Pro 2",
+    "image": "https://example.com/airpodspro2.jpg",
+    "category": "Earbuds",
+    "price": 249,
+    "description": "Immersive sound with active noise cancellation.",
+    "specification": [
+      "Active Noise Cancellation",
+      "Adaptive Transparency",
+      "Touch control",
+      "Up to 30 hours with case",
+      "Water and sweat resistance"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": "google-pixel-7-pro",
+    "title": "Google Pixel 7 Pro",
+    "image": "https://example.com/pixel7pro.jpg",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "The smartest phone with Google’s AI-powered features.",
+    "specification": [
+      "6.7-inch OLED display",
+      "Google Tensor G2",
+      "50MP Triple-camera",
+      "5000mAh battery",
+      "128GB to 512GB storage"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "id": "asus-rog-zephyrus-g14",
+    "title": "ASUS ROG Zephyrus G14",
+    "image": "https://example.com/rogzephyrusg14.jpg",
+    "category": "Laptops",
+    "price": 1599,
+    "description": "The perfect blend of power and portability for gamers.",
+    "specification": [
+      "14-inch QHD display",
+      "AMD Ryzen 9",
+      "NVIDIA GeForce RTX 4060",
+      "16GB RAM",
+      "1TB SSD"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "id": "garmin-fenix-7x",
+    "title": "Garmin Fenix 7X",
+    "image": "https://example.com/garminfenix7x.jpg",
+    "category": "Smartwatches",
+    "price": 999,
+    "description": "Built for adventure with solar charging capabilities.",
+    "specification": [
+      "1.4-inch transflective display",
+      "Solar charging",
+      "Up to 28 days battery life",
+      "GPS, GLONASS, Galileo",
+      "Water resistant to 100 meters"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "id": "samsung-galaxy-buds2",
+    "title": "Samsung Galaxy Buds2",
+    "image": "https://example.com/galaxybuds2.jpg",
+    "category": "Earbuds",
+    "price": 149,
+    "description": "True wireless earbuds with noise cancellation.",
+    "specification": [
+      "Active Noise Cancellation",
+      "Enhanced sound quality",
+      "Up to 20 hours battery life",
+      "IPX2 water resistance",
+      "Bluetooth 5.2"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "id": "canon-eos-r7",
+    "title": "Canon EOS R7",
+    "image": "https://example.com/eosr7.jpg",
+    "category": "Cameras",
+    "price": 1499,
+    "description": "Advanced mirrorless camera for enthusiasts.",
+    "specification": [
+      "32.5MP APS-C sensor",
+      "4K video recording",
+      "15fps continuous shooting",
+      "Dual Pixel CMOS AF II",
+      "5-axis in-body stabilization"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "id": "oneplus-buds-pro-2",
+    "title": "OnePlus Buds Pro 2",
+    "image": "https://example.com/oneplusbudspro2.jpg",
+    "category": "Earbuds",
+    "price": 129,
+    "description": "Noise-canceling earbuds with high-quality audio.",
+    "specification": [
+      "Active Noise Cancellation",
+      "11mm dynamic drivers",
+      "Up to 28 hours battery life",
+      "IP55 water resistance",
+      "Bluetooth 5.3"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "id": "dell-xps-15",
+    "title": "Dell XPS 15",
+    "image": "https://example.com/dellxps15.jpg",
+    "category": "Laptops",
+    "price": 1899,
+    "description": "A laptop that combines power and sleek design.",
+    "specification": [
+      "15.6-inch InfinityEdge display",
+      "Intel i9-13900H",
+      "NVIDIA GeForce RTX 4070",
+      "32GB RAM",
+      "1TB SSD"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": "samsung-galaxy-s23-ultra",
+    "title": "Samsung Galaxy S23 Ultra",
+    "image": "https://example.com/galaxys23ultra.jpg",
+    "category": "Smartphones",
+    "price": 1199,
+    "description": "Redefine photography with the Samsung Galaxy S23 Ultra.",
+    "specification": [
+      "6.8-inch AMOLED display",
+      "Snapdragon 8 Gen 2",
+      "200MP Quad-camera",
+      "5000mAh battery",
+      "Up to 1TB storage"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "id": "hp-spectre-x360",
+    "title": "HP Spectre x360",
+    "image": "https://example.com/hpspectrex360.jpg",
+    "category": "Laptops",
+    "price": 1399,
+    "description": "An elegant, convertible laptop with impressive performance.",
+    "specification": [
+      "13.5-inch OLED touchscreen",
+      "Intel i7-13700H",
+      "Intel Iris Xe graphics",
+      "16GB RAM",
+      "512GB SSD"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "id": "xiaomi-13-pro",
+    "title": "Xiaomi 13 Pro",
+    "image": "https://example.com/xiaomi13pro.jpg",
+    "category": "Smartphones",
+    "price": 799,
+    "description": "Flagship-level performance at an affordable price.",
+    "specification": [
+      "6.73-inch AMOLED display",
+      "Snapdragon 8 Gen 2",
+      "50MP Triple-camera",
+      "120W fast charging",
+      "Up to 512GB storage"
+    ],
+    "availability": true,
+    "rating": 4.4
+  }
+]
