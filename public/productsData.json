@@ -1,5 +1,73 @@
 [
   {
+    "id": "apple-iphone-15-pro-max",
+    "title": "Apple iPhone 15 Pro Max",
+    "image": "https://example.com/iphone15promax.jpg",
+    "category": "Smartphones",
+    "price": 1299,
+    "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    "specification": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, Ultrawide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": "samsung-galaxy-s23-ultra",
+    "title": "Samsung Galaxy S23 Ultra",
+    "image": "https://example.com/galaxys23ultra.jpg",
+    "category": "Smartphones",
+    "price": 1199,
+    "description": "Redefine photography with the Samsung Galaxy S23 Ultra.",
+    "specification": [
+      "6.8-inch AMOLED display",
+      "Snapdragon 8 Gen 2",
+      "200MP Quad-camera",
+      "5000mAh battery",
+      "Up to 1TB storage"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "id": "google-pixel-7-pro",
+    "title": "Google Pixel 7 Pro",
+    "image": "https://example.com/pixel7pro.jpg",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "The smartest phone with Google’s AI-powered features.",
+    "specification": [
+      "6.7-inch OLED display",
+      "Google Tensor G2",
+      "50MP Triple-camera",
+      "5000mAh battery",
+      "128GB to 512GB storage"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "id": "nothing-phone-2",
+    "title": "Nothing Phone (2)",
+    "image": "https://example.com/nothingphone2.jpg",
+    "category": "Smartphones",
+    "price": 799,
+    "description": "Sleek design with a transparent back and smooth performance.",
+    "specification": [
+      "6.7-inch OLED display",
+      "Snapdragon 8+ Gen 1",
+      "50MP Dual-camera",
+      "4,700mAh battery",
+      "Up to 12GB RAM and 256GB storage"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
     "id": "sony-wh-1000xm5",
     "title": "Sony WH-1000XM5",
     "image": "https://example.com/wh1000xm5.jpg",
@@ -15,6 +83,23 @@
     ],
     "availability": true,
     "rating": 4.9
+  },
+  {
+    "id": "asus-rog-phone-7",
+    "title": "ASUS ROG Phone 7",
+    "image": "https://example.com/rogphone7.jpg",
+    "category": "Smartphones",
+    "price": 999,
+    "description": "High-performance gaming smartphone with advanced cooling and stunning graphics.",
+    "specification": [
+      "6.78-inch AMOLED display, 165Hz refresh rate",
+      "Snapdragon 8 Gen 2",
+      "50MP Triple-camera system",
+      "6000mAh battery with 65W fast charging",
+      "512GB storage and 16GB RAM"
+    ],
+    "availability": true,
+    "rating": 4.8
   },
   {
     "id": "nikon-z9",
@@ -119,23 +204,6 @@
     "rating": 4.8
   },
   {
-    "id": "google-pixel-7-pro",
-    "title": "Google Pixel 7 Pro",
-    "image": "https://example.com/pixel7pro.jpg",
-    "category": "Smartphones",
-    "price": 899,
-    "description": "The smartest phone with Google’s AI-powered features.",
-    "specification": [
-      "6.7-inch OLED display",
-      "Google Tensor G2",
-      "50MP Triple-camera",
-      "5000mAh battery",
-      "128GB to 512GB storage"
-    ],
-    "availability": true,
-    "rating": 4.6
-  },
-  {
     "id": "asus-rog-zephyrus-g14",
     "title": "ASUS ROG Zephyrus G14",
     "image": "https://example.com/rogzephyrusg14.jpg",
@@ -238,23 +306,6 @@
     "rating": 4.8
   },
   {
-    "id": "samsung-galaxy-s23-ultra",
-    "title": "Samsung Galaxy S23 Ultra",
-    "image": "https://example.com/galaxys23ultra.jpg",
-    "category": "Smartphones",
-    "price": 1199,
-    "description": "Redefine photography with the Samsung Galaxy S23 Ultra.",
-    "specification": [
-      "6.8-inch AMOLED display",
-      "Snapdragon 8 Gen 2",
-      "200MP Quad-camera",
-      "5000mAh battery",
-      "Up to 1TB storage"
-    ],
-    "availability": true,
-    "rating": 4.7
-  },
-  {
     "id": "hp-spectre-x360",
     "title": "HP Spectre x360",
     "image": "https://example.com/hpspectrex360.jpg",
@@ -270,22 +321,5 @@
     ],
     "availability": true,
     "rating": 4.6
-  },
-  {
-    "id": "xiaomi-13-pro",
-    "title": "Xiaomi 13 Pro",
-    "image": "https://example.com/xiaomi13pro.jpg",
-    "category": "Smartphones",
-    "price": 799,
-    "description": "Flagship-level performance at an affordable price.",
-    "specification": [
-      "6.73-inch AMOLED display",
-      "Snapdragon 8 Gen 2",
-      "50MP Triple-camera",
-      "120W fast charging",
-      "Up to 512GB storage"
-    ],
-    "availability": true,
-    "rating": 4.4
   }
 ]
