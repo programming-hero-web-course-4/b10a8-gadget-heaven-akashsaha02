@@ -1,76 +1,48 @@
-import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 import { useState } from 'react';
 import { useCart } from '../../context/CartContext/CartContext';
-import { useWishlist } from '../../context/WishlistContext/WishlistContext';
+import { useNavigate } from 'react-router-dom';
+import Cart from '../../components/Cart/Cart';
+import WishList from '../../components/WishList/WishList';
 
 const DashboardPage = () => {
-    const { cart, removeFromCart } = useCart();
-    const { wishlist, removeFromWishlist, addToCart } = useWishlist();
+    const { cart } = useCart();
     const [activeTab, setActiveTab] = useState(true);
+    const [showModal, setShowModal] = useState(false);
+    const { setCart } = useCart();
+    const navigate = useNavigate();
+
+    const handlePurchase = () => {
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setCart([]);  // Empty the cart
+        setShowModal(false);
+        navigate('/');  // Redirect to homepage
+    };
+    const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 
     return (
         <div>
             <h1 className="text-4xl font-bold text-center my-10">Dashboard</h1>
             <div className="flex justify-center items-center gap-4 mb-10">
-                <button
-                    className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                    onClick={() => setActiveTab(true)}
-                >
-                    <FaShoppingCart className="mr-2" />
-                    Cart
-                </button>
-                <button
-                    className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                    onClick={() => setActiveTab(false)}
-                >
-                    <FaHeart className="mr-2" />
-                    Wishlist
-                </button>
+                <button className="btn btn-primary" onClick={() => setActiveTab(true)}>Cart</button>
+                <button className="btn btn-primary" onClick={() => setActiveTab(false)}>Wishlist</button>
+            </div>
+            <div className="my-10">
+                {activeTab ? <Cart onPurchase={handlePurchase} /> : <WishList />}
             </div>
 
-            {activeTab ? (
-                <div className="flex flex-col items-center gap-4">
-                    {cart.length === 0 ? (
-                        <h1 className="text-2xl">Cart is empty</h1>
-                    ) : (
-                        cart.map((product, index) => (
-                            <div key={index} className="flex items-center gap-4">
-                                <img src={product.image} alt={product.title} className="w-20 h-20 object-cover" />
-                                <div>
-                                    <h1 className="text-lg font-bold">{product.title}</h1>
-                                    <p className="text-gray-500">{product.category}</p>
-                                    <p className="text-gray-600">${product.price.toFixed(2)}</p>
-                                </div>
-                                <button onClick={() => removeFromCart(product.id)} className="text-red-500">❌</button>
-                            </div>
-                        ))
-                    )}
-                </div>
-            ) : (
-                <div className="flex flex-col items-center gap-4">
-                    {wishlist.length === 0 ? (
-                        <h1 className="text-2xl">Wishlist is empty</h1>
-                    ) : (
-                        wishlist.map((product, index) => (
-                            <div key={index} className="flex items-center gap-4">
-                                <img src={product.image} alt={product.title} className="w-20 h-20 object-cover" />
-                                <div>
-                                    <h1 className="text-lg font-bold">{product.title}</h1>
-                                    <p className="text-gray-500">{product.category}</p>
-                                    <p className="text-gray-600">${product.price.toFixed(2)}</p>
-                                </div>
-                                <div className="space-x-2">
-                                    <button onClick={() => removeFromWishlist(product.id)} className="text-red-500">❌</button>
-                                    <button
-                                        onClick={() => {
-                                            addToCart(product);
-                                            removeFromWishlist(product.id);
-                                        }}
-                                        className="btn btn-sm">Add to cart</button>
-                                </div>
-                            </div>
-                        ))
-                    )}
+            {/* Modal for purchase confirmation */}
+            {showModal && (
+                <div className="modal modal-open">
+                    <div className="modal-box">
+                        <h3 className="font-bold text-lg">Thank you for your purchase!</h3>
+                        <p className="py-4">Your total cost is ${totalPrice}</p>
+                        <div className="modal-action">
+                            <button className="btn" onClick={closeModal}>Close</button>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>

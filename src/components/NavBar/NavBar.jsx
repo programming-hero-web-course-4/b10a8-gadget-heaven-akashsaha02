@@ -1,5 +1,4 @@
-
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { MdOutlineShoppingCart, MdFavoriteBorder } from "react-icons/md";
 import { useCart } from "../../context/CartContext/CartContext";
 import { useWishlist } from "../../context/WishlistContext/WishlistContext";
@@ -7,11 +6,10 @@ import { useWishlist } from "../../context/WishlistContext/WishlistContext";
 const NavBar = () => {
   const { cart } = useCart();
   const { wishlist } = useWishlist();
-  const navigate=useNavigate();
 
-  const handleClick=()=>{
-    navigate('/dashboard');
-  }
+  // Calculate total quantity and total price
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 
   return (
     <div className="px-4 sticky top-0 z-10">
@@ -61,7 +59,7 @@ const NavBar = () => {
             </ul>
           </div>
           <NavLink to="/" className="btn btn-ghost text-xl">
-            Gadget Heaven
+            ZENIN Tech
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -93,7 +91,7 @@ const NavBar = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
               <div className="indicator">
                 <MdOutlineShoppingCart className="text-2xl" />
-                <span className="badge badge-sm indicator-item">{cart.length}</span>
+                <span className="badge badge-sm indicator-item">{totalQuantity}</span>
               </div>
             </div>
             <div
@@ -101,15 +99,15 @@ const NavBar = () => {
               className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow"
             >
               <div className="card-body">
-                <span className="text-lg font-bold">{cart.length} Items</span>
-                <span className="text-info">Subtotal: ${cart.reduce((total, item) => total + item.price, 0).toFixed(2)}</span>
+                <span className="text-lg font-bold">{totalQuantity} Items</span>
+                <span className="text-info">Subtotal: ${totalPrice}</span>
                 <div className="card-actions">
-                  <button onClick={()=>handleClick()} className="btn btn-primary btn-block">View cart</button>
+                  <button className="btn btn-primary btn-block">View cart</button>
                 </div>
               </div>
             </div>
           </div>
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={()=>handleClick()}>
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
               <MdFavoriteBorder className="text-2xl" />
               <span className="badge badge-sm indicator-item">{wishlist.length}</span>

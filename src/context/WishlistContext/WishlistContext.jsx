@@ -28,6 +28,14 @@ const WishlistProvider = ({ children }) => {
     });
   };
 
+  const removeCategoryFromWishlist = (category) => {
+    setWishlist((prevWishlist) => {
+      const updatedWishlist = prevWishlist.filter((item) => item.category !== category);
+      localStorage.setItem("wishlist", JSON.stringify(updatedWishlist)); // Save wishlist to local storage
+      return updatedWishlist;
+    });
+  };
+
   const isInWishlist = (id) => {
     return wishlist.some((item) => item.id === id);
   };
@@ -38,7 +46,7 @@ const WishlistProvider = ({ children }) => {
   }, [wishlist]);
 
   return (
-    <WishlistContext.Provider value={{ wishlist, addToWishlist, removeFromWishlist, isInWishlist, addToCart }}>
+    <WishlistContext.Provider value={{ wishlist, addToWishlist, removeFromWishlist, removeCategoryFromWishlist, isInWishlist, addToCart }}>
       {children}
     </WishlistContext.Provider>
   );
