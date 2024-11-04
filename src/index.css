@@ -14,3 +14,9 @@
         scrollbar-width: none;  /* Firefox */
   }
 }
+
+.hero-section {
+    background-image: linear-gradient(rgba(180, 8, 180, 0.7), rgba(77, 7, 77, 0.8)), url('./assets/about-us-bg.jpg');
+    height: 300px; /* Adjust height as needed */
+    color: white;
+}

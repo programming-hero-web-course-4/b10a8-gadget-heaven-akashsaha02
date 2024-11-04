@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { ProductContext } from "../../context/ProductContext/ProductContext";
 import { useWishlist } from "../../context/WishlistContext/WishlistContext";
 import { useCart } from "../../context/CartContext/CartContext";
-import { FaHeart, FaShoppingCart ,FaStar} from "react-icons/fa";
+import { FaHeart, FaShoppingCart, FaStar } from "react-icons/fa";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -12,11 +12,18 @@ const ProductDetails = () => {
 
   const { addToWishlist, isInWishlist } = useWishlist();
   const { addToCart } = useCart();
+  const location = useLocation();
 
   useEffect(() => {
     const foundProduct = products.find((item) => item.id === id);
     setProduct(foundProduct);
   }, [id, products]);
+
+  useEffect(() => {
+    if (product) {
+      document.title = `Product Details - ${product.title}`;
+    }
+  }, [product, location]);
 
   if (!product) {
     return <div>Loading...</div>;

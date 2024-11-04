@@ -14,10 +14,10 @@ const Cart = ({ onPurchase }) => {
 
     return (
         <div>
-            <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold">Your Cart 🛒</h2>
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <h2 className="text-2xl md:text-3xl font-bold">Your Cart 🛒</h2>
                 <div className="flex items-center gap-2">
-                    <button onClick={sortCartByPrice} className="btn btn-sm">Sort by Price</button>
+                    <button onClick={sortCartByPrice} className="btn btn-accent">Sort by Price</button>
                     <button onClick={onPurchase} className="btn btn-primary">
                         Purchase - ${totalPrice}
                     </button>

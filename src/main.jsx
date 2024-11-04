@@ -6,11 +6,12 @@ import Layout from './components/Layout/Layout.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import HomePage from './pages/HomePage/HomePage';
 import ProductDetails from './pages/ProductDetails/ProductDetails.jsx';
-
+import DashboardPage from './pages/DashboardPage/DashboardPage.jsx';
+import StatisticsPage from './pages/StatisticsPage/StatisticsPage.jsx';
 import { ProductProvider } from "./context/ProductContext/ProductContext.jsx";
 import { CartProvider } from './context/CartContext/CartContext.jsx';
 import { WishlistProvider } from './context/WishlistContext/WishlistContext.jsx';
-import DashboardPage from './pages/DashboardPage/DashboardPage.jsx';
+import AboutPage from './pages/AboutPage/AboutPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,12 +29,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/statistics',
-        element: <h1>Statistics</h1>
+        element: <StatisticsPage/>
       },
       {
         path: '/dashboard',
         element: <DashboardPage/>
       },
+      {
+        path: '/about-us',
+        element: <AboutPage/>
+      }
 
     ]
   }

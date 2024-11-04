@@ -1,7 +1,8 @@
-const ProductCategories = ({ categories, selectedCategory, onCategorySelect }) => {
+const ProductCategories = ({ categoriesList, selectedCategory, onCategorySelect }) => {
+    console.log(categoriesList);
     return (
         <div className="flex overflow-scroll no-scrollbar md:flex-col gap-2 bg-base-200 p-4 rounded-xl">
-            {categories.map((category, index) => (
+            {categoriesList.map((category, index) => (
                 <p
                     key={index}
                     onClick={() => onCategorySelect(category)}

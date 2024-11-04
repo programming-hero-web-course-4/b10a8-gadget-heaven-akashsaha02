@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useCart } from '../../context/CartContext/CartContext';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Cart from '../../components/Cart/Cart';
 import WishList from '../../components/WishList/WishList';
 
@@ -10,6 +10,11 @@ const DashboardPage = () => {
     const [showModal, setShowModal] = useState(false);
     const { setCart } = useCart();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        document.title = 'Zenin Tech | Dashboard';
+    }, [location]);
 
     const handlePurchase = () => {
         setShowModal(true);
@@ -24,10 +29,12 @@ const DashboardPage = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-center my-10">Dashboard</h1>
-            <div className="flex justify-center items-center gap-4 mb-10">
-                <button className="btn btn-primary" onClick={() => setActiveTab(true)}>Cart</button>
-                <button className="btn btn-primary" onClick={() => setActiveTab(false)}>Wishlist</button>
+            <div className="py-6 my-4 rounded-xl border-2 bg-indigo-300">
+                <h1 className="text-4xl font-bold text-center my-10">Dashboard</h1>
+                <div className="flex justify-center items-center gap-4 mb-10">
+                    <button className="btn btn-primary" onClick={() => setActiveTab(true)}>Cart</button>
+                    <button className="btn btn-primary" onClick={() => setActiveTab(false)}>Wishlist</button>
+                </div>
             </div>
             <div className="my-10">
                 {activeTab ? <Cart onPurchase={handlePurchase} /> : <WishList />}

@@ -12,12 +12,24 @@ const NavBar = () => {
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 
+  const getBackgroundColor = () => {
+    switch (location.pathname) {
+      case "/dashboard":
+        return "bg-blue-200";
+      case "/statistics":
+        return "bg-blue-200";
+      default:
+        return "bg-white";
+    }
+  };
+
+
   return (
-    <div className="px-4 sticky top-0 z-10">
-      <div className="navbar max-w-7xl mx-auto bg-purple-600 rounded-t-xl mt-4">
+    <div className={`px-4 sticky top-0 z-10 ${getBackgroundColor()} shadow-md py-2`}>
+      <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="pr-3 lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -53,13 +65,13 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/extra" activeClassName="active">
-                  Extra
+                <NavLink to="/about-us" activeClassName="active">
+                  About Us
                 </NavLink>
               </li>
             </ul>
           </div>
-          <NavLink to="/" className="btn btn-ghost text-xl">
+          <NavLink to="/" className="text-xl md:text-2xl font-bold">
             ZENIN Tech
           </NavLink>
         </div>
@@ -81,8 +93,8 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/extra" activeClassName="active">
-                Extra
+              <NavLink to="/about-us" activeClassName="active">
+                About Us
               </NavLink>
             </li>
           </ul>

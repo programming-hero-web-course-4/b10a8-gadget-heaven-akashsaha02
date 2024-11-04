@@ -7,7 +7,7 @@ const Layout = () => {
     return (
         <div>
             <NavBar />
-            <div className="max-w-7xl mx-auto px-4 lg:px-0">
+            <div className="max-w-7xl mx-auto px-4">
                 <Outlet />
             </div>
             <Footer />
