@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { MdOutlineShoppingCart, MdFavoriteBorder } from "react-icons/md";
 import { useCart } from "../../context/CartContext/CartContext";
 import { useWishlist } from "../../context/WishlistContext/WishlistContext";
@@ -6,6 +6,7 @@ import { useWishlist } from "../../context/WishlistContext/WishlistContext";
 const NavBar = () => {
   const { cart } = useCart();
   const { wishlist } = useWishlist();
+  const navigate = useNavigate();
 
   // Calculate total quantity and total price
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
@@ -102,12 +103,12 @@ const NavBar = () => {
                 <span className="text-lg font-bold">{totalQuantity} Items</span>
                 <span className="text-info">Subtotal: ${totalPrice}</span>
                 <div className="card-actions">
-                  <button className="btn btn-primary btn-block">View cart</button>
+                  <button className="btn btn-primary btn-block" onClick={() => navigate('/dashboard')}>View cart</button>
                 </div>
               </div>
             </div>
           </div>
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={() => navigate('/dashboard')}>
             <div className="indicator">
               <MdFavoriteBorder className="text-2xl" />
               <span className="badge badge-sm indicator-item">{wishlist.length}</span>
