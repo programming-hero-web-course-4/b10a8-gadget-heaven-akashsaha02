@@ -1,8 +1,9 @@
 import aboutImg from '../../assets/about-us.jpg'
+import { Link } from 'react-router-dom'
 const AboutPage = () => {
     return (
         <div className="my-4">
-            <section className="hero-section bg-cover bg-center flex flex-col items-center justify-center rounded-xl">
+            <section className="hero-section bg-cover bg-center flex flex-col items-center justify-center rounded-xl py-10 sm:py-16 md:py-28 lg:py-36 px-4">
                 <h1 className="text-4xl md:text-5xl font-bold">About Us</h1>
                 <p className="mt-2 md:mt-4 text-lg md:text-2xl text-center max-w-2xl">Discover the story and vision behind our brand.</p>
             </section>
@@ -52,7 +53,7 @@ const AboutPage = () => {
             <section className="cta-section bg-purple-700 text-white text-center py-12 rounded-xl">
                 <h2 className="text-3xl font-semibold mb-4">Join Our Journey</h2>
                 <p className="text-lg mb-8 px-4">We’re constantly evolving and would love for you to be a part of our story.</p>
-                <a href="/shop" className="px-6 py-3 bg-white text-purple-700 font-bold rounded-full hover:bg-purple-100 transition">Shop Now</a>
+                <Link to="/" className="px-6 py-3 bg-white text-purple-700 font-bold rounded-full hover:bg-purple-100 transition">Shop Now</Link>
             </section>
         </div>
     )

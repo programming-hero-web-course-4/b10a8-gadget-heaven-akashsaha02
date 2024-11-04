@@ -1,25 +1,24 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import ProductCategories from "../../components/ProductCategories/ProductCategories";
+import { ProductContext } from "../../context/ProductContext/ProductContext";
 
 const HomePage = () => {
-  const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]); // Corrected spelling from "catagories" to "categories"
   const [selectedCategory, setSelectedCategory] = useState("All");
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    fetch("productsData.json")
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
+  const products = useContext(ProductContext);
 
+  useEffect(() => {
     fetch("productCatagories.json")
       .then((response) => response.json())
       .then((data) => setCategories(data));
   }, []);
+
 
   useEffect(() => {
     document.title = "Zenin Tech | Home";
