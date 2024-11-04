@@ -35,9 +35,9 @@ const HomePage = () => {
 
       <div className="my-10">
         <h2 className="text-3xl text-center font-bold">Explore Cutting-Edge Gadgets</h2>
-        <div className="grid grid-cols-12 mt-10 gap-4">
-          {/* Categories */}
-          <div className="col-span-3">
+        <div className="grid grid-cols-1 md:grid-cols-12 mt-10 gap-4">
+          {/* Categories Sidebar */}
+          <div className="md:col-span-3 mb-4 md:mb-0">
             <ProductCategories
               categories={categories}
               selectedCategory={selectedCategory}
@@ -45,8 +45,8 @@ const HomePage = () => {
             />
           </div>
 
-          {/* Products */}
-          <div className="col-span-9 grid grid-cols-2 md:grid-cols-3 gap-4">
+          {/* Products Section */}
+          <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredProducts.map((product) => (
               <ProductCard
                 key={product.id}
@@ -56,6 +56,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );

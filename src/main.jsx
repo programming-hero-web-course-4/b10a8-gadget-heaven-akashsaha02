@@ -10,6 +10,7 @@ import ProductDetails from './pages/ProductDetails/ProductDetails.jsx';
 import { ProductProvider } from "./context/ProductContext/ProductContext.jsx";
 import { CartProvider } from './context/CartContext/CartContext.jsx';
 import { WishlistProvider } from './context/WishlistContext/WishlistContext.jsx';
+import DashboardPage from './pages/DashboardPage/DashboardPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/dashboard',
-        element: <h1>Dashboard</h1>
+        element: <DashboardPage/>
       },
 
     ]

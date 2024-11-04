@@ -1,6 +1,6 @@
 const ProductCategories = ({ categories, selectedCategory, onCategorySelect }) => {
     return (
-        <div className="flex md:flex-col gap-2 bg-base-200 p-4 rounded-xl">
+        <div className="flex overflow-scroll no-scrollbar md:flex-col gap-2 bg-base-200 p-4 rounded-xl">
             {categories.map((category, index) => (
                 <p
                     key={index}
