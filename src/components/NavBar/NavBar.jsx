@@ -14,12 +14,19 @@ const NavBar = () => {
 
   const getBackgroundColor = () => {
     switch (location.pathname) {
-      case "/dashboard":
-        return "bg-blue-100";
-      case "/statistics":
-        return "bg-blue-100";
+      case '/':
+        return "bg-blue-600 text-white";
       default:
         return "bg-white";
+    }
+  };
+
+  const getLogoBgColor = () => {
+    switch (location.pathname) {
+      case "/":
+        return "bg-gray-800 text-white";
+      default:
+        return "bg-blue-600";
     }
   };
 
@@ -71,7 +78,7 @@ const NavBar = () => {
             </ul>
           </div>
           <NavLink to="/" className="text-xl md:text-2xl font-bold">
-            <span className="px-2 py-1 bg-blue-700 text-white rounded-lg">Blu</span> Gadgets
+            <span className={`px-2 py-1 ${getLogoBgColor()} text-white rounded-lg`}>Blu</span> Gadgets
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">

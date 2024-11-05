@@ -4,6 +4,7 @@ import { ProductContext } from "../../context/ProductContext/ProductContext";
 import { useWishlist } from "../../context/WishlistContext/WishlistContext";
 import { useCart } from "../../context/CartContext/CartContext";
 import { FaHeart, FaShoppingCart, FaStar } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -29,8 +30,18 @@ const ProductDetails = () => {
     return <div>Loading...</div>;
   }
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    toast.success("Product added to cart");
+  }
+
+  const handleAddToWishlist = (product) => {
+    !isInWishlist(product.id) && addToWishlist(product)
+    toast.success("Product added to wishlist");
+  }
+
   return (
-    <div className="container mx-auto px-5 py-5 lg:px-0">
+    <div className="mx-auto px-5 py-5 lg:px-0">
       <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Product Image */}
         <div className="md:w-1/2">
@@ -76,7 +87,7 @@ const ProductDetails = () => {
           <div className="flex space-x-4">
             <button
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-              onClick={() => addToCart(product)}
+              onClick={()=>handleAddToCart(product)}
             >
               <FaShoppingCart className="mr-2" />
               Add to Cart
@@ -86,7 +97,7 @@ const ProductDetails = () => {
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-red-500 hover:bg-red-600"
                 } text-white rounded-lg`}
-              onClick={() => !isInWishlist(product.id) && addToWishlist(product)}
+              onClick={() => handleAddToWishlist(product)}
               disabled={isInWishlist(product.id)}
             >
               <FaHeart className="mr-2" />
