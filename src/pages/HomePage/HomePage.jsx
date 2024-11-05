@@ -4,6 +4,7 @@ import Banner from "../../components/Banner/Banner";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import ProductCategories from "../../components/ProductCategories/ProductCategories";
 import { ProductContext } from "../../context/ProductContext/ProductContext";
+import errorImage from "../../assets/error.svg";
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]); // Corrected spelling from "catagories" to "categories"
@@ -21,7 +22,7 @@ const HomePage = () => {
 
 
   useEffect(() => {
-    document.title = "Zenin Tech | Home";
+    document.title = "Blu Gadgets | Home";
   }, [selectedCategory, location]);
 
   console.log(categories.map((item) => item.name));
@@ -69,7 +70,10 @@ const HomePage = () => {
                 />
               ))
             ) : (
-              <div className="">Not found</div>
+              <div className="flex flex-col justify-center items-center h-auto w-full sm:col-span-9 border rounded-lg p-16">
+                <img src={errorImage} alt="" className="max-w-xs"/>
+                <h1 className="text-2xl font-bold text-center mt-2">No products found</h1>
+              </div>
             )}
           </div>
         </div>

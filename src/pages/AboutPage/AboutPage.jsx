@@ -50,10 +50,10 @@ const AboutPage = () => {
                     </div>
                 </div>
             </section>
-            <section className="cta-section bg-purple-700 text-white text-center py-12 rounded-xl">
+            <section className="cta-section bg-blue-700 text-white text-center py-12 rounded-xl">
                 <h2 className="text-3xl font-semibold mb-4">Join Our Journey</h2>
                 <p className="text-lg mb-8 px-4">We’re constantly evolving and would love for you to be a part of our story.</p>
-                <Link to="/" className="px-6 py-3 bg-white text-purple-700 font-bold rounded-full hover:bg-purple-100 transition">Shop Now</Link>
+                <Link to="/" className="px-6 py-3 bg-white text-blue-700 font-bold rounded-full hover:bg-purple-100 transition">Shop Now</Link>
             </section>
         </div>
     )

@@ -15,14 +15,13 @@ const NavBar = () => {
   const getBackgroundColor = () => {
     switch (location.pathname) {
       case "/dashboard":
-        return "bg-blue-200";
+        return "bg-blue-100";
       case "/statistics":
-        return "bg-blue-200";
+        return "bg-blue-100";
       default:
         return "bg-white";
     }
   };
-
 
   return (
     <div className={`px-4 sticky top-0 z-10 ${getBackgroundColor()} shadow-md py-2`}>
@@ -72,7 +71,7 @@ const NavBar = () => {
             </ul>
           </div>
           <NavLink to="/" className="text-xl md:text-2xl font-bold">
-            ZENIN Tech
+            <span className="px-2 py-1 bg-blue-700 text-white rounded-lg">Blu</span> Gadgets
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
