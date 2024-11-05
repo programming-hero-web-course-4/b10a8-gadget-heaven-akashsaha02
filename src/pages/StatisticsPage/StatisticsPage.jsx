@@ -13,8 +13,9 @@ const StatisticsPage = () => {
   const products = useContext(ProductContext);
   return (
     <div className="">
-      <div className="py-6 my-4 rounded-xl border-2 bg-indigo-600">
-        <h1 className="text-4xl font-bold text-center my-10 text-white ">Statistics</h1>
+      <div className="py-16 my-4 rounded-xl text-white text-center border-2 bg-blue-600">
+        <h1 className="text-2xl  md:text-3xl lg:text-4xl font-bold">Statistics</h1>
+        <p className="mt-2 text-sm md:text-md">View the statistics of the product</p>
       </div>
       <ResponsiveContainer width="100%" height={400}>
         <ComposedChart

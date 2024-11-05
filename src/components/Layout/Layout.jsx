@@ -6,11 +6,13 @@ import { Toaster } from 'react-hot-toast';
 
 const Layout = () => {
     return (
-        <div>
+        <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
             <NavBar />
-            <div className="max-w-7xl mx-auto px-4">
-                <Outlet />
-                <Toaster />
+            <div>
+                <div className="max-w-7xl mx-auto px-2 xl:px-0">
+                    <Outlet />
+                    <Toaster />
+                </div>
             </div>
             <Footer />
         </div>

@@ -15,7 +15,7 @@ const NavBar = () => {
   const getBackgroundColor = () => {
     switch (location.pathname) {
       case '/':
-        return "bg-blue-600 text-white";
+        return "bg-blue-600 text-white rounded-t-xl";
       default:
         return "bg-white";
     }
@@ -30,9 +30,18 @@ const NavBar = () => {
     }
   };
 
+  const getShadow = () => {
+    switch (location.pathname) {
+      case "/":
+        return "";
+      default:
+        return "shadow-md";
+    }
+  }
+
   return (
-    <div className={`px-4 sticky top-0 z-10 ${getBackgroundColor()} shadow-md py-2`}>
-      <div className="navbar max-w-7xl mx-auto">
+    <div className={`px-2 sticky top-0 z-10 mt-2 ${getShadow()}`}>
+      <div className={`navbar max-w-7xl mx-auto ${getBackgroundColor()}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="pr-3 lg:hidden">
@@ -53,7 +62,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black"
             >
               <li>
                 <NavLink to="/" exact activeClassName="active">
@@ -77,13 +86,13 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <NavLink to="/" className="text-xl md:text-2xl font-bold">
-            <span className={`px-2 py-1 ${getLogoBgColor()} text-white rounded-lg`}>Blu</span> Gadgets
+          <NavLink to="/" className="text-md sm:text-xl md:text-2xl font-bold">
+            <span className={`px-2 py-1 ml-1 ${getLogoBgColor()} text-white rounded-lg`}>Blu</span> <span className="">Gadgets</span>
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
+          <ul className="menu menu-horizontal px-1 font-bold">
+            <li className="">
               <NavLink to="/" exact activeClassName="active">
                 Home
               </NavLink>
@@ -110,7 +119,7 @@ const NavBar = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
               <div className="indicator">
                 <MdOutlineShoppingCart className="text-2xl" />
-                <span className="badge badge-sm indicator-item">{totalQuantity}</span>
+                <span className="badge badge-secondary badge-sm indicator-item">{totalQuantity}</span>
               </div>
             </div>
             <div
@@ -118,18 +127,18 @@ const NavBar = () => {
               className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow"
             >
               <div className="card-body">
-                <span className="text-lg font-bold">{totalQuantity} Items</span>
-                <span className="text-info">Subtotal: ${totalPrice}</span>
+                <span className="text-lg font-bold text-black">{totalQuantity} Items</span>
+                <span className="text-md text-black">Subtotal: ${totalPrice}</span>
                 <div className="card-actions">
                   <button className="btn btn-primary btn-block" onClick={() => navigate('/dashboard')}>View cart</button>
                 </div>
               </div>
             </div>
           </div>
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={() => navigate('/dashboard')}>
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={() => navigate('/dashboard', { state: { activeTab: 'wishlist' } })}>
             <div className="indicator">
               <MdFavoriteBorder className="text-2xl" />
-              <span className="badge badge-sm indicator-item">{wishlist.length}</span>
+              <span className="badge badge-secondary badge-sm indicator-item">{wishlist.length}</span>
             </div>
           </div>
         </div>

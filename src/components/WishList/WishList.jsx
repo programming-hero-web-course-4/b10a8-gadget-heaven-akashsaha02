@@ -1,11 +1,10 @@
 import { useCart } from '../../context/CartContext/CartContext';
 import { useWishlist } from '../../context/WishlistContext/WishlistContext';
 import toast from 'react-hot-toast';
+import errorImg from '../../assets/error.svg'
 const WishList = () => {
     const { wishlist, removeFromWishlist } = useWishlist();
     const {addToCart}=useCart();
-    const totalPrice = wishlist.reduce((total, item) => total + item.price, 0).toFixed(2);
-
     const handleMoveToCart = (product) => {
         addToCart(product);
         removeFromWishlist(product.id);
@@ -38,7 +37,10 @@ const WishList = () => {
                                 </div>
                             </div>
                         ))
-                    ):<h1 className="text-2xl font-bold text-center">Wishlist is empty</h1>
+                    ):<div className="flex flex-col justify-center items-center h-auto w-full sm:col-span-9 border rounded-lg p-16">
+                    <h1 className="text-2xl font-bold text-center mb-4">Cart is empty</h1>
+                    <img src={errorImg} alt="" className="max-w-xs" />
+                </div>
                 }
             </div>
         </div>

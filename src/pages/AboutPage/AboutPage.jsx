@@ -4,8 +4,8 @@ const AboutPage = () => {
     return (
         <div className="my-4">
             <section className="hero-section bg-cover bg-center flex flex-col items-center justify-center rounded-xl py-10 sm:py-16 md:py-28 lg:py-36 px-4">
-                <h1 className="text-4xl md:text-5xl font-bold">About Us</h1>
-                <p className="mt-2 md:mt-4 text-lg md:text-2xl text-center max-w-2xl">Discover the story and vision behind our brand.</p>
+                <h1 className="text-2xl md:text-4xl font-bold">About Us</h1>
+                <p className="mt-2 md:mt-4 text-lg md:text-xl text-center max-w-2xl">Discover the story and vision behind our brand.</p>
             </section>
             <section className="brand-story px-4 md:px-16 py-8 md:py-16 flex flex-col md:flex-row items-center">
                 <img src={aboutImg} alt="Brand story" className="w-full md:w-1/2 rounded-lg shadow-md mb-4 md:mb-0 md:mr-8" />
@@ -50,10 +50,10 @@ const AboutPage = () => {
                     </div>
                 </div>
             </section>
-            <section className="cta-section bg-blue-700 text-white text-center py-12 rounded-xl">
+            <section className="cta-section bg-blue-600 text-white text-center py-12 rounded-xl">
                 <h2 className="text-3xl font-semibold mb-4">Join Our Journey</h2>
                 <p className="text-lg mb-8 px-4">We’re constantly evolving and would love for you to be a part of our story.</p>
-                <Link to="/" className="px-6 py-3 bg-white text-blue-700 font-bold rounded-full hover:bg-purple-100 transition">Shop Now</Link>
+                <Link to="/" className="px-6 py-3 bg-white text-blue-600 font-bold rounded-full hover:bg-purple-100 transition">Shop Now</Link>
             </section>
         </div>
     )
