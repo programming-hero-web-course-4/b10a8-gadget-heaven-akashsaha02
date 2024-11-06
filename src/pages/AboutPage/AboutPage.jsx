@@ -1,6 +1,47 @@
 import aboutImg from '../../assets/about-us.jpg'
-import { Link } from 'react-router-dom'
+import userImg from '../../assets/user.jpg'
+import { Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+
 const AboutPage = () => {
+
+    const location = useLocation();
+    useEffect(() => {
+        document.title = 'Blu Gadgets | About';
+    }, [location]);
+
+    const teamMembers = [
+        {
+            name: "Alice Smith",
+            role: "Chief Technology Officer",
+            description: "Tech enthusiast focused on creating seamless user experiences.",
+            img: userImg,
+            socials: [
+                { platform: "LinkedIn", url: "#" },
+                { platform: "Twitter", url: "#" }
+            ]
+        },
+        {
+            name: "Bob Johnson",
+            role: "Head of Marketing",
+            description: "Driven to make our brand resonate with audiences globally.",
+            img: userImg,
+            socials: [
+                { platform: "LinkedIn", url: "#" },
+                { platform: "Instagram", url: "#" }
+            ]
+        },
+        {
+            name: "Catherine Lee",
+            role: "Product Manager",
+            description: "Focused on delivering innovative solutions to meet customer needs.",
+            img: userImg,
+            socials: [
+                { platform: "LinkedIn", url: "#" },
+                { platform: "Facebook", url: "#" }
+            ]
+        }
+    ];
     return (
         <div className="my-4">
             <section className="hero-section bg-cover bg-center flex flex-col items-center justify-center rounded-xl py-10 sm:py-16 md:py-28 lg:py-36 px-4">
@@ -38,16 +79,21 @@ const AboutPage = () => {
             <section className="team px-4 md:px-16 py-8 md:py-16 text-center">
                 <h2 className="text-2xl md:text-3xl font-semibold mb-8">Meet Our Team</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    <div className="team-member">
-                        <img src="team1.jpg" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4 shadow-lg"/>
-                            <h3 className="text-lg font-bold">John Doe</h3>
-                            <p className="text-purple-700">CEO & Founder</p>
-                            <p className="text-gray-600 text-sm mt-2">Passionate about innovation and leading our brand to success.</p>
+                    {teamMembers.map((member, index) => (
+                        <div key={index} className="team-member">
+                            <img src={member.img} alt={member.name} className="w-24 h-24 rounded-full mx-auto mb-4 shadow-lg" />
+                            <h3 className="text-lg font-bold">{member.name}</h3>
+                            <p className="text-purple-700">{member.role}</p>
+                            <p className="text-gray-600 text-sm mt-2">{member.description}</p>
                             <div className="social-icons mt-3 flex justify-center gap-2">
-                                <a href="#" className="text-gray-500 hover:text-purple-700">LinkedIn</a>
-                                <a href="#" className="text-gray-500 hover:text-purple-700">Twitter</a>
+                                {member.socials.map((social, i) => (
+                                    <a key={i} href={social.url} className="text-gray-500 hover:text-purple-700">
+                                        {social.platform}
+                                    </a>
+                                ))}
                             </div>
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </section>
             <section className="cta-section bg-blue-600 text-white text-center py-12 rounded-xl">
