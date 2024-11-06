@@ -18,7 +18,7 @@ const WishList = () => {
 
     return (
         <div>
-            <h2 className="text-2xl font-bold flex items-center gap-2">Your Wishlist 💜</h2>
+            <h2 className="text-2xl font-bold text-center">Your Wishlist 💜({wishlist.length})</h2>
             <div className="flex flex-col items-center gap-4 mt-4 border p-4 rounded-lg">
                 {
                     wishlist.length>0?(
@@ -38,7 +38,7 @@ const WishList = () => {
                             </div>
                         ))
                     ):<div className="flex flex-col justify-center items-center h-auto w-full sm:col-span-9 border rounded-lg p-16">
-                    <h1 className="text-2xl font-bold text-center mb-4">Cart is empty</h1>
+                    <h1 className="text-2xl font-bold text-center mb-4">Wishlist is empty</h1>
                     <img src={errorImg} alt="" className="max-w-xs" />
                 </div>
                 }

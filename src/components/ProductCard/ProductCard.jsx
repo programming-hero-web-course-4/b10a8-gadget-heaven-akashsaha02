@@ -4,7 +4,7 @@ const ProductCard = ({ product, onViewDetails }) => {
             <div className="card">
                 <div className="card-body">
                     <img src={product.image} alt={product.title} className="w-full rounded-lg" />
-                    <h2 className="text-lg">{product.title}</h2>
+                    <h2 className="text-lg line-clamp-1">{product.title}</h2>
                     <p className="text-lg font-bold">${product.price}</p>
                     <button
                         onClick={() => onViewDetails(product.id)}
