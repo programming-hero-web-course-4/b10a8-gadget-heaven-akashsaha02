@@ -84,16 +84,16 @@ const ProductDetails = () => {
               ))}
             </ul>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex flex-col sm:flex-row gap-2">
             <button
-              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 justify-center"
               onClick={()=>handleAddToCart(product)}
             >
               <FaShoppingCart className="mr-2" />
               Add to Cart
             </button>
             <button
-              className={`flex items-center px-4 py-2 ${isInWishlist(product.id)
+              className={`flex items-center px-4 py-2 justify-center ${isInWishlist(product.id)
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-red-500 hover:bg-red-600"
                 } text-white rounded-lg`}
