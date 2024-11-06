@@ -10,6 +10,12 @@ Check out the live site here: [Blu Gadgets Live Site](https://blugadgets-akashsa
 
 ---
 
+## 📄 Requirement Document Link
+
+Check out the requirement document link here: [Requirement Document Link](https://drive.google.com/file/d/1ynlCIVKYQNgHk1edvopdXKhqZZ0sgOyB/view?usp=sharing)
+
+---
+
 ## 🚀 Key React Features
 
 This project utilizes essential React concepts to deliver optimal performance, maintainability, and a smooth user experience:
